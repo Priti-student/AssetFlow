@@ -49,6 +49,5 @@ export const generateToken = (user: { id: string; email: string; role: string })
 };
 
 export const generateRefreshToken = () => {
-  const crypto = require('crypto');
-  return crypto.randomBytes(40).toString('hex');
+  return require('crypto').randomBytes(40).toString('hex');
 };
