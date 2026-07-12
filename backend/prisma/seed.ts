@@ -4,7 +4,7 @@ import pg from 'pg';
 import bcrypt from 'bcryptjs';
 import { v4 as uuidv4 } from 'uuid';
 
-const connectionString = process.env.DATABASE_URL || 'postgresql://postgres:969296@localhost:5432/assetflow?schema=public';
+const connectionString = process.env.DATABASE_URL;
 const pool = new pg.Pool({ connectionString });
 const adapter = new PrismaPg(pool);
 const prisma = new PrismaClient({ adapter });
